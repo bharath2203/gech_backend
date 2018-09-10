@@ -22,8 +22,8 @@ class NotificationDetail(APIView):
 	def get(self, request, pk, format = None):
 		notification = self.get_object(pk)
 		serializer = NotificationSerializer(notification)
-		return Response(serializer.data)
-
+		return Response({"notifications" : serializer.data})
+		
 class StudentDetail(APIView):
 
 	def get_object(self, slug):

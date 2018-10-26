@@ -10,11 +10,19 @@ class NotificationSerializer(serializers.ModelSerializer):
 
 
 class StudentSerializer(serializers.ModelSerializer):
+
+	#photo_url = serializers.SerializerMethodField()
+
 	class Meta:
 		model = Student
-		fields = ('usn', 'name', 'department_id', 'ug_program', 'sem', 'student_phone_no', 'parents_phone_no',
-			'father_name', 'mother_name','date_of_birth', 'address', 'email_id'
+		fields = ('usn', 'name', 'department_id', 'sem', 'student_phone_no', 'parents_phone_no',
+			'image', 'father_name', 'mother_name','date_of_birth', 'address', 'email_id'
 		)
+
+	#def get_photo_url(self, student):
+	#	request = self.context.get('request')
+	#	photo_url = student.image
+	#	return request.build_absolute_uri(photo_url)
 
 class FacultySerializer(serializers.ModelSerializer):
 	class Meta:

@@ -34,11 +34,11 @@ class StudentDetail(APIView):
 			raise Http404
 
 	def get(self, request, slug, format = None):
-		dict = request.query_params
-		if not 'token' in dict.keys():
-			return Response(status = 400)
+		#dict = request.query_params
+		#if not 'token' in dict.keys():
+			#return Response(status = 400)
 		student = self.get_object(slug)
-		serializer = StudentSerializer(student)
+		serializer = StudentSerializer(student, context = {"request": request})
 		return Response(serializer.data)
 
 class FacultyList(APIView):

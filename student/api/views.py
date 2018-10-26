@@ -38,7 +38,7 @@ class StudentDetail(APIView):
 		#if not 'token' in dict.keys():
 			#return Response(status = 400)
 		student = self.get_object(slug)
-		serializer = StudentSerializer(student, context = {"request": request})
+		serializer = StudentSerializer(student)
 		return Response(serializer.data)
 
 class FacultyList(APIView):

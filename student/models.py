@@ -31,6 +31,7 @@ class Student(models.Model):
 	address = models.TextField(max_length = 500)
 	sem = models.CharField(choices = sems, max_length = 10)
 	email_id = models.EmailField( null = True)
+	image = models.ImageField(null = True)
 
 
 	def __str__(self):

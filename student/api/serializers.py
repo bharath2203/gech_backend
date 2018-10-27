@@ -16,7 +16,7 @@ class StudentSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Student
 		fields = ('usn', 'name', 'department_id', 'sem', 'student_phone_no', 'parents_phone_no',
-			'image', 'father_name', 'mother_name','date_of_birth', 'address', 'email_id'
+			'image',  'father_name', 'mother_name','date_of_birth', 'address', 'email_id'
 		)
 
 	#def get_photo_url(self, student):

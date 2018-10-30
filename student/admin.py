@@ -15,10 +15,10 @@ class myForm(forms.ModelForm):
            w, h = get_image_dimensions(picture)
            print(w)
            print(h)
-           if w > 400 or w < 100:
-               raise forms.ValidationError("The image is %i pixel wide. It's supposed to be between 100 to 200" % w)
-           if h > 400 or h < 100:
-               raise forms.ValidationError("The image is %i pixel high. It's supposed to be between 100 to 200" % h)
+           if w > 600 or w < 100:
+               raise forms.ValidationError("The image is %i pixel wide. It's supposed to be between 100 to 600" % w)
+           if h > 600 or h < 100:
+               raise forms.ValidationError("The image is %i pixel high. It's supposed to be between 100 to 600" % h)
            #if w != h: 
                #raise forms.ValidationError("Crop picture to same height and width")
        return picture

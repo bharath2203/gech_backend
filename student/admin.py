@@ -2,7 +2,6 @@ from django.contrib import admin
 from .models import Student, Notification, Department, Faculty
 from django.core.files.images import get_image_dimensions
 from django import forms
-from image_cropping import ImageCroppingMixin
 
 class myForm(forms.ModelForm):
    class Meta:
@@ -24,7 +23,7 @@ class myForm(forms.ModelForm):
                #raise forms.ValidationError("Crop picture to same height and width")
        return picture
 
-class MyAdmin( admin.ModelAdmin):
+class MyAdmin(admin.ModelAdmin):
     form = myForm
 
 admin.site.register(Student, MyAdmin)

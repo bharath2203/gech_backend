@@ -1,5 +1,4 @@
 from django.db import models
-from image_cropping import ImageRatioField
 
 class Department(models.Model):
 	departments = (
@@ -61,7 +60,7 @@ class Faculty(models.Model):
 	phone_no = models.CharField(max_length = 10)
 	email_id = models.EmailField(blank = True, null = True)	
 	position = models.CharField(max_length = 100)
-	image = models.ImageField(blank = True, null = True)
+	image = models.ImageField(upload_to = "", blank = True, null = True)
 
 	def __str__(self):
 		return self.name

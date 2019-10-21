@@ -1,7 +1,7 @@
 arrow==0.12.1
 certifi==2018.4.16
 chardet==3.0.4
-Django==1.11.8
+Django==1.11.23
 django-cors-headers==2.4.0
 django-debug-toolbar==1.9.1
 django-extensions==2.1.0

@@ -15,7 +15,7 @@ Inflector==2.0.12
 jsonfield==2.0.2
 kafka-python==1.4.3
 nose==1.3.7
-Pillow==5.1.0
+Pillow==6.2.0
 python-dateutil==2.7.3
 pytz==2018.3
 querystring-parser==1.2.3
